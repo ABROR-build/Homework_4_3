@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+    <h1>Lesson</h1>
+    <img src="{{ lessons.image.url }}">
+    <h3>{{ lesson.subject.name }}</h3><hr><br>
+    <h4>{{ lesson.topic }}</h4><hr><br>
+    <p>{{ lesson.description }}</p><hr><br>
+    {{ lesson.article }}
+
+    <a href="{% url 'edit_lesson' lesson.pk %}">
+        Edit
+    </a>
+    <a href="{% url 'delete_lesson' lesson.pk %}">
+        Delete
+    </a>
+
+</body>
+</html>

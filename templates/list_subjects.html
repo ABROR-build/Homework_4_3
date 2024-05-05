@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subjects</title>
+</head>
+<body>
+<h1>Subjects</h1>
+    {% for subject in subjects %}
+        <p>
+            <a href="{% url 'list_lessons' subject.pk %}">{{ subject }}</a>
+        </p>
+    {% endfor %}
+    <a href="{% url 'add_lesson' %}">
+        Add lesson
+    </a>
+</body>
+</html>
